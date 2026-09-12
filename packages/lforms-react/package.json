@@ -1,0 +1,51 @@
+{
+  "name": "lforms-react",
+  "version": "0.1.0",
+  "description": "Thin React wrapper around the LForms (LHC-Forms) wc-lhc-form web component",
+  "keywords": [
+    "lforms",
+    "lhc-forms",
+    "react",
+    "fhir",
+    "Questionnaire",
+    "SDC"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "github:lhncbc/lforms",
+    "directory": "packages/lforms-react"
+  },
+  "license": "SEE LICENSE IN ../../LICENSE.md",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "shx rm -rf dist",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "shx": "^0.3.4",
+    "typescript": "^5.9.2"
+  }
+}

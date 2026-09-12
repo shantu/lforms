@@ -125,6 +125,16 @@ code is not ready yet. The current lforms npm package only contains built files
 in `/dist/lforms` directory. You can use those files as described in above
 section [Using the LHC-Forms Web Component](#using).
 
+## <a id="react">Using LForms from React</a>
+
+A thin React wrapper around the `wc-lhc-form` web component is available in
+[`packages/lforms-react`](packages/lforms-react). It renders the existing web
+component, assigns `questionnaire`/`options`/`prepop`/`fhirVersion` as DOM
+properties, and bridges the `onFormReady`/`onFormChange`/`onError` events to
+React callback props. See its
+[README](packages/lforms-react/README.md) and the demo in
+`packages/lforms-react/example`.
+
 ## <a id="docs">Related Documents</a>
 - `form_definition.md` The internal data format of the LHC-Forms widget.
 - `changed-features.md` The list of features that changes between the new 
