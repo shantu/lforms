@@ -29,7 +29,11 @@ export interface LoadLFormsOptions {
 const loaded = new Map<string, Promise<void>>();
 
 function joinUrl(baseUrl: string, path: string): string {
-  return `${baseUrl.replace(/\/+$/, '')}/${path}`;
+  let end = baseUrl.length;
+  while (end > 0 && baseUrl[end - 1] === '/') {
+    end--;
+  }
+  return `${baseUrl.slice(0, end)}/${path}`;
 }
 
 function loadScript(doc: Document, url: string): Promise<void> {
