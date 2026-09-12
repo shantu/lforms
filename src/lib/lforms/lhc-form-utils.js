@@ -736,6 +736,10 @@ const FormUtils = {
         lhcFormElements = document.getElementsByTagName("wc-lhc-form");
       }
     }
+    // the element itself may be the wc-lhc-form (e.g. a ref to the custom element)
+    else if (element.tagName && element.tagName.toLowerCase() === "wc-lhc-form") {
+      lhcFormElements = [element];
+    }
     else {
       lhcFormElements = element.getElementsByTagName("wc-lhc-form");
     }
