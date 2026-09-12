@@ -133,7 +133,8 @@ component, assigns `questionnaire`/`options`/`prepop`/`fhirVersion` as DOM
 properties, and bridges the `onFormReady`/`onFormChange`/`onError` events to
 React callback props. See its
 [README](packages/lforms-react/README.md) and the demo in
-`packages/lforms-react/example`.
+[`packages/lforms-react/example`](packages/lforms-react/example/README.md)
+(including instructions for running the demo against a local LForms build).
 
 ## <a id="docs">Related Documents</a>
 - `form_definition.md` The internal data format of the LHC-Forms widget.
